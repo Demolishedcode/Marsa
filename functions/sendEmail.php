@@ -11,7 +11,7 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.strato.com';                      // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'support@mymarsa.com';             // SMTP username
-$mail->Password = 'Marsa123';              // SMTP password
+$mail->Password = //Hidden;              // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 $mail->isHTML(true);                                  // Set email format to HTML
