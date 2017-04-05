@@ -1,0 +1,20 @@
+# Turn Rwrite Engine On
+RewriteEngine on
+
+# Make everything nicer
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^404 404.html [NC,L]
+RewriteRule ^login login.php [NC,L]
+RewriteRule ^logout logout.php [NC,L]
+RewriteRule ^home index.html [NC,L]
+RewriteRule ^register signup.php [NC,L]
+RewriteRule ^reset reset.php [NC,L]
+RewriteRule ^calendar user-interface.php [NC,L]
+RewriteRule ^groups user-group.php [NC,L]
+RewriteRule ^todolist user-todolist.php [NC,L]
+RewriteRule ^profile user-profile.php [NC,L]
+
+
+# Set error page
+ErrorDocument 404 'https://www.mymarsa.com/404'
