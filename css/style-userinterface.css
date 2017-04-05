@@ -1,0 +1,302 @@
+.calender{
+  position: relative;
+  border-collapse: collapse;
+  float:left;
+}
+
+.container {
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  width: 880px;
+  position: absolute;
+}
+
+.calender tr:first-child {
+  border-bottom: 1px solid black;
+}
+
+.calender th {
+  border: none;
+  padding: 20px;
+  color: #302c2c;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+.calender td {
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  overflow: hidden;
+  clear: both
+}
+
+.calender td:not(.none):hover {
+  box-shadow: 0 0 0 1px #ff5400 inset;
+}
+
+.calender a {
+  text-decoration: none;
+  color:  #9d9595;
+  padding: 30px;
+}
+
+.calender a:hover {
+  color: #ff5400;
+}
+
+.side-container {
+  float: left;
+  width: 270px;
+  margin-left: 20px;
+}
+
+.side-box {
+  padding: 10px;
+  border: 1px solid #ff5400;
+  border-radius: 5px;
+}
+
+.side-box:first-child {
+  margin-bottom: 10px;
+}
+
+.box-title {
+  color: white;
+  background-color: #ff5400;
+  padding: 10px;
+  margin: -10px -10px 10px -10px;
+}
+
+select {
+  border: none;
+  padding: 5px;
+  background-color: #ebebeb;
+}
+
+.month {
+  width: 60%;
+}
+
+.year {
+  width: 38%;
+}
+
+option {
+  background-color: white;
+}
+
+.calender-options {
+  margin-top: 15px;
+  color: #ff5400;
+  width: 100%;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #ff5400;
+}
+
+.event {
+  overflow: hidden;
+  word-wrap: break-word;
+  max-height: 350px;
+}
+
+.calender-options span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    background-color: #ff5700;
+    color: white;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+.add-event, .show-event {
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    top: 50%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+       -moz-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    background-color: white !important;
+    border-radius: 5px;
+    z-index: 10;
+    display: none;
+    width: 350px;
+    height: 450px;
+    border-radius: 5px;
+}
+
+.add-event, .show-event span:hover, {cursor: pointer;}
+
+
+.add-inner, .show-inner {
+    text-align: center;
+    color: #ff5400;
+}
+
+.add-event, .show-event label {
+    margin-bottom: 10px;
+}
+
+.add-event span, .show-event span {
+    position: absolute;
+    margin-left: 60px;
+}
+.add-event span img, .show-event span img {width: 15px;}
+
+.add-event form, .show-event form {
+    color: black;
+    width: 280px;
+    margin-left: 50%;
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        transform: translate(-50%);
+}
+
+.add-event form p, .show-event form p {
+    color: #ff4500;
+    margin-top: 30px
+}
+
+.add-event input, .show-event input {
+    width: 249px;
+    padding: 15px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing:content-box;
+    box-sizing: content-box;
+    border: none;
+    border-radius: 3px;
+    background-color: #ebebeb;
+}
+
+.add-event input[name="event"], .show-event input[name="save"] {
+    width: 150px !important;
+    background-color: #ff5400;
+    color: white;
+    padding: 10px;
+    transition: 0.1s box-shadow ease-out;
+    margin: 20px 0 10px 0;
+}
+
+.show-event input[name="save"] {
+  width: 80px !important;
+  float: left;
+  margin: 0;
+}
+
+.add-event input[name="event"]:hover, .show-event input[name="save"]:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+}
+
+.add-event textarea, .show-event textarea {
+    width: 250px; !important;
+    padding: 15px;
+    border: none;
+    font-family: 'lato',sans-serif !important;
+    resize: none;
+    background-color: #ebebeb;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.change {
+  margin-top: 20px;
+}
+
+.change span {
+  margin:0;
+  position: relative;
+  display: inline-block;
+  padding: 8px;
+  float: left;
+  color: #ff5400;
+}
+
+.change span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 370px) {
+    .add-event, .show-event {
+        width: 97%;
+        height: 97%;
+    }
+
+    .add-event form, .show-event form {width: 100%;}
+
+    .add-event input, .show-event input, .add-event textarea , .show-event textarea {
+        width: 80%;
+    }
+
+    .add-event span, .show-event span {margin-left: 20px}
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+
+  .side-container {
+    position: relative;
+    margin: 0;
+    width: 95%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+  }
+
+  .calender {
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .calender th {
+    padding: 10px;
+    font-size: 16pt;
+  }
+
+  .calender td {
+    height: 60px;
+    width: 60px;
+  }
+  .calender a {
+
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .calender th {
+    padding: 3px;
+    font-size: 12pt;
+  }
+
+  .calender td {
+    height: 30px;
+    width: 30px;
+  }
+  .calender a {
+
+    padding: 10px;
+  }
+}

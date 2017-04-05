@@ -1,0 +1,174 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato',sans-serif;
+    overflow: hidden;
+}
+
+.section-title {
+    width: 100%;
+    height: 50px;
+    background-color: #ff5700;
+    color: white;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 9;
+    display: none;
+}
+
+section {
+    width: -webkit-calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+    width: -ms-calc(100% - 60px);
+    width: calc(100% - 60px);
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    margin-left: 60px;
+    position: absolute;
+}
+
+nav {
+    background-color: #131313;
+    overflow: hidden;
+    position: fixed;
+    width: 50px;
+    height: 100vh  !important;
+    z-index: 9;
+}
+
+.nav-inner {
+    background-color: #131313;
+    width: 200px  !important;
+    height: 100%  !important;
+    overflow: hidden;
+    z-index: 9;
+}
+
+nav ol {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+nav li:hover {
+    background-color: black;
+}
+
+nav span:last-child {
+    display: inline-block;
+    vertical-align: text-top;
+    line-height: 22px;
+}
+
+nav img {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+
+.menu-trigger img {
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    margin: 0 0 20px 0;
+}
+
+.menu-trigger span {height: 50px; !important}
+
+.menu-trigger img:hover {
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff5400;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 12.5px;
+}
+
+.a-icon {
+    padding: 15px 7.5px 15px 7.5px;
+    background-color: #0f0f0f;
+}
+
+.icon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: #ebebeb;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    margin-right: 15px;
+    font-size: 15pt;
+    vertical-align: text-top;
+}
+
+.icon-sub {
+    color: white;
+    height: 35px !important;
+    line-height: 35px !important;
+}
+
+.responsive-menu {display: none;}
+
+@media screen and (max-width: 700px) {
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav {
+        width: 100% !important;
+        height: 50px !important;
+        position: static ;
+    }
+
+    .nav-inner {
+        position: absolute;
+        margin-left: -200px;
+        margin-top: -50px;
+        z-index: 10;
+    }
+
+    .responsive-menu {
+        display: block;
+        color: #ff5400;
+        height: 100%;
+        width: 120px;
+    }
+
+    .responsive-menu img {
+        margin: 0 0 0 10px;
+        height: 20px;
+        width: 20px;
+        vertical-align: text-top;
+        padding: 10px;
+    }
+
+    .responsive-menu span {
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .responsive-menu img, .responsive-menu span {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translate(0,-50%);
+        -moz-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+    }
+}

@@ -1,0 +1,208 @@
+* {margin: 0}
+
+/*Style Background*/
+body {
+    background-image: url("afbeeldingen/loginbg.png") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /*Set Letter Type*/
+    font-family: 'Lato', sans-serif;
+}
+
+section {
+    overflow-x: hidden;
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+
+/*Style Login section*/
+.login {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 700px;
+    float: left;
+}
+
+.logo img {
+    height: 80px;
+    width: 0 auto;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.login form {
+    width: 245px;
+    margin: 30px 0px 0px 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.login input {
+    height: 40px;
+    width: 230px;
+    padding: 5px 5px 5px 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.login input:nth-child(2) {margin-bottom: 20px;}
+
+.login input:last-child {
+    width: 245px;
+    background-color: #ff5700;
+    color: white;
+    font-size: 7pt;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+}
+
+.reset {
+    color: white;
+    font-size: 9pt;
+    letter-spacing: 1px;
+    border-left: 2px solid #ff5700;
+    padding: 3px 0 3px 10px;
+    width: 150px;
+    margin: 40px 0 0 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.register {
+    color: white;
+    font-size: 9pt;
+    letter-spacing: 1px;
+    border-left: 2px solid #ff5700;
+    padding: 3px 0 3px 10px;
+    width: 150px;
+    margin: 4px 0 0 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+
+
+a {text-decoration: none}
+
+/*Add hover/ focus animations*/
+input:last-child:hover, .reset:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+.reset:hover {
+    color: #ff5700
+}
+
+.reset-box {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 800px;
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ff5700;
+}
+
+.title p {
+    position: absolute;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.reset-box form {
+    width: 240px;
+    margin: 30px 0px 0px 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.reset-box input {
+    height: 40px;
+    width: 230px;
+    padding: 5px 5px 5px 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background-color: #ebebeb;
+}
+
+.reset-box label {
+    display: inline-block;
+    font-size: 10pt;
+    margin-bottom: 15px;
+}
+
+.reset-box input:last-child {
+    width: 245px;
+    background-color: #ff5700;
+    color: white;
+    font-size: 7pt;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+}
+
+.reset-box .message p {
+    font-size: 8pt;
+    color: #5a5a5a;
+    padding: 30px;
+}
+
+/*Add hover/ focus animations*/
+.reset-box input:last-chil:active {
+    cursor: pointer;
+    outline: none;
+}
+
+.alert, .succes {
+    display: none;
+    width: 245px;
+    height: auto;
+    white-space: pre-wrap;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 50px;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    color: white;
+    font-size: 9pt;
+}
+
+.alert {
+    background-color: #fc402c;
+    border: 1px solid #c91704;
+}
+
+.succes {
+    background-color: #2ec23e;
+    border: 1px solid #039d14;
+}

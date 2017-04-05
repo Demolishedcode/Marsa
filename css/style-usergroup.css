@@ -1,0 +1,412 @@
+body,html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato',sans-serif;
+    overflow-x: hidden;
+}
+
+#groups {
+    background-color: rgba(255,87,0,0.5);
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    background-color: #ff5700;
+    color: white;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+.group-join, .group-create {
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    top: 50%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+       -moz-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    background-color: white !important;
+    border-radius: 5px;
+    z-index: 10;
+    display: none;
+}
+
+.group-create span:hover, .group-join span:hover {cursor: pointer;}
+
+.group-create {
+    width: 350px;
+    height: 520px;
+    border-radius: 5px;
+}
+
+.group-join {
+    width: 350px;
+    height: 500px;
+}
+
+.join-inner {
+    width: 300px;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+       -moz-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.group-join form {
+    width: 300px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.group-join input:focus {outline: 0px}
+
+.group-join input {
+    height: 40px;
+    width: 260px;
+    border: none;
+    vertical-align: text-top;
+    margin-right: -4px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    background-color: #ff7e00;
+    color: white;
+    font-size: 11pt;
+    letter-spacing: 1;
+}
+
+.group-join input::-webkit-input-placeholder {color: white;}
+.group-join input:-moz-input-placeholder {color: white;}
+.group-join input::-moz-input-placeholder {color: white;}
+.group-join input::-ms-input-placeholder {color: white;}
+.group-join input::input-placeholder {color: white;}
+
+.group-join input:last-child {
+    height: 40px;
+    width: 40px;
+    padding-left: 0;
+    border-bottom-right-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+}
+
+.group-join p {
+    color: #ff5400;
+    font-size: 13pt;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.group-join span {
+    position: absolute;
+    margin-left: 90px;
+}
+
+.search-item span {
+    position: relative;
+    margin: 0;
+}
+
+.group-join span img {width: 15px;}
+
+.search-result {
+    overflow: hidden;
+    overflow-y: auto;
+    width: 300px;
+    height: 330px;
+    margin: 20px 0 10px 0;
+    background-color: #ebebeb;
+    border-radius: 3px;
+}
+
+.join-inner ol {
+    margin-top: 0px;
+    padding: 0;
+}
+
+.join-inner li {
+    list-style: none;
+    width: 200%;
+    height: 60px;
+    border-bottom: 1px solid #d0cece;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.join-inner li #error {
+    height: 10px;
+}
+
+.list-text, .list-join {
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.list-join {
+    background-color: #4a4a49;
+    text-align: center;
+    color: white;
+    height: 100%;
+    vertical-align: top;
+}
+
+.list-join div:first-child{
+    height: 90%;
+    border-radius: 5px;
+    background-color: #ff5400;
+    margin-right: 16px;
+    width: 100px;
+}
+
+.list-join div:first-child p {
+    width: 100%;
+    color: white;
+    margin: 0;
+    top: 50%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+       -moz-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    font-size: 11pt;
+
+}
+
+.list-join div:last-child{
+    color: #ff5400;
+    vertical-align: text-top;
+}
+
+.list-join div:last-child p {
+    margin: 0;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+       -moz-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+    font-size: 11pt;
+}
+
+.list-join div{
+    display: inline-block;
+    height: 100%;
+}
+
+.list-text:hover {
+    cursor: pointer;
+    background-color: #d0cece;
+}
+
+
+.join-inner li b:last-child {
+    font-size: 10pt;
+    font-weight: normal;
+    color: #484848;
+}
+
+.list-join div:first-child:hover {
+    cursor: pointer;
+    background-color: rgb(230,76,35);
+}
+
+.list-join div:last-child:hover {cursor: pointer;}
+
+/*Style Option section*/
+.group-option {
+    margin-top: 40px;
+}
+
+.option-inner {
+    width: 100%;
+    text-align: center;
+}
+
+.join, .create {
+    width: 250px;
+    height: 300px;
+    display: inline-block;
+    background-color: rgba(255,84,0,0.6);
+    border-radius: 5px;
+    color: white;
+}
+
+.join img, .create img {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.join div, .create div {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+       -moz-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+}
+
+.join:hover, .create:hover {
+    background-color: #ff5400;
+    cursor: pointer;
+}
+
+.create {
+    vertical-align: top;
+    margin-left: 70px;
+}
+
+@media screen and (max-width: 630px) {
+    .join, .create {
+        width: 200px;
+        height: 250px;
+    }
+
+    .create {margin-left: 20px;}
+}
+
+@media screen and (max-width: 450px) {
+    .join, .create {
+        width: 90%;
+        display: block;
+        margin: 0;
+        margin-left: 50%;
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        transform: translate(-50%);
+    }
+
+    .create {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/*Style group create*/
+
+.create-inner {
+    text-align: center;
+    color: #ff5400;
+}
+
+.group-create label {
+    margin-bottom: 10px;
+}
+
+.group-create span {
+    position: absolute;
+    margin-left: 60px;
+}
+.group-create span img {width: 15px;}
+
+.group-create form {
+    color: black;
+    width: 280px;
+    margin-left: 50%;
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        transform: translate(-50%);
+}
+
+.group-create form p {
+    color: #ff4500;
+    margin-top: 30px
+}
+
+.group-create input {
+    width: 249px;
+    padding: 15px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing:content-box;
+    box-sizing: content-box;
+    border: none;
+    border-radius: 3px;
+    background-color: #ebebeb;
+}
+
+.group-create input[name="create"] {
+    width: 150px !important;
+    background-color: #ff5400;
+    color: white;
+    padding: 10px;
+    transition: 0.1s box-shadow ease-out;
+    margin: 20px 0 10px 0;
+}
+
+.group-create input[name="create"]:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+}
+
+.group-create input[type='radio'] {width: auto;margin: 0 5px 10px 0;}
+
+.group-create textarea {
+    width: 250px; !important;
+    padding: 15px;
+    border: none;
+    font-family: 'lato',sans-serif !important;
+    resize: none;
+    background-color: #ebebeb;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.wrap-categories {
+    width: 80px;
+    text-align: left;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+       -moz-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.features {
+    width: 150px;
+    margin: -15px 0 0 -21px;
+    font-size: 10pt;
+    display: none;
+}
+
+.features li {
+    color: #a6a6a6;
+    list-style: disc;
+}
+
+@media screen and (max-width: 370px) {
+    .group-join, .group-create {
+        width: 97%;
+        height: 97%;
+    }
+
+    .join-inner {width: 90%; text-align: center;}
+    .group-join form, .group-create form {width: 100%;}
+
+    .search-result {
+        width: 100%;;
+        margin-left: 50%;
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        transform: translate(-50%);
+    }
+
+    .group-create input, .group-create textarea {
+        width: 80%;
+    }
+
+    .group-join input:first-child {
+        width: -webkit-calc(100% - 40px);
+        width: -moz-calc(100% - 40px);
+        width: -ms-calc(100% - 40px);
+        width: calc(100% - 40px);
+    }
+
+    .group-join span {margin-left: 50px;}
+    .group-create span {margin-left: 20px}
+}

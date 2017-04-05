@@ -1,0 +1,114 @@
+* {margin: 0}
+
+/*Style Background*/
+body {
+  background-image: url("afbeeldingen/loginbg.png");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+
+    /*Set Letter Type*/
+    font-family: 'Lato', sans-serif;
+}
+
+/*Style Login section*/
+section {
+    position: absolute;
+    max-width: 300px;
+    width: 100%;
+    top: 50%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+}
+
+.logo img {
+    height: 80px;
+    width: 0 auto;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+form {
+    width: 245px;
+    margin: 30px 0 0 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+input {
+    height: 40px;
+    width: 245px;
+    padding: 5px 5px 5px 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+input:nth-child(5) {
+    margin-bottom: 25px;
+}
+
+input:last-child {
+    width: 260px;
+    background-color: #ff5700;
+    color: white;
+    font-size: 7pt;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+}
+
+.error {
+    position: absolute;
+    z-index: 10;
+    height: auto;
+    width: 245px;
+    word-break: break-all;
+    border: 1px solid #df8f90;
+    border-radius: 3px;
+    background-color: #ffd2d3;
+    padding: 5px;
+    margin: 50px 0 50px 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    color: red;
+    font-size: 9pt;
+}
+
+/*Add hover/ focus animations*/
+input:last-child:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+.alert {
+    display: none;
+    width: 245px;
+    height: auto;
+    white-space: pre-wrap;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 50px;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    color: white;
+    font-size: 9pt;
+    background-color: #fc402c;
+    border: 1px solid #c91704;
+}

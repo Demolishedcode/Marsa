@@ -1,0 +1,226 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: "Lato",sans-serif;
+}
+
+#notes {background-color: rgba(255,87,0,0.5)}
+
+.title {
+    width: 100%;
+    height: 50px;
+    background-color: #ff5700;
+    color: white;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+.add {
+  float: right;
+  padding: 0 40px 0 20px;
+  height: 100%;
+  border-left: 1px solid white;
+}
+
+.add img {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.add:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 9;
+    display: none;
+}
+
+.create-list {
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    top: 50%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+       -moz-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    background-color: white !important;
+    border-radius: 5px;
+    z-index: 10;
+    display: none;
+    width: 350px;
+    height: 430px;
+}
+
+.create-list p {
+    color: #ff5400;
+    font-size: 13pt;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.create-list p:last-of-type {
+  margin: -30px  0 10px 0;
+  color: #ff3b30;
+  font-size: 10pt;
+}
+
+.create-list span {
+    position: absolute;
+    margin-left: 70px;
+}
+
+.create-list span:hover {
+  cursor: pointer;
+}
+
+.create-list span img {
+  height: 15px;
+  width: 15px;
+}
+
+.create-list img, .todo_list img {
+  height: 20px;
+  width: 20px;
+}
+
+.create-list input, .todo_list input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.create-list input[type=text], .todo_list input[type=text] {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 5px;
+  background-color: #ebebeb;
+  width: 250px;
+  margin-bottom: 5px;
+}
+
+.create-list input[type=submit] {
+  padding: 10px 20px 10px 20px;
+  background-color: #ff5400;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%);
+     -moz-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.create-list input[type=submit]:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+  box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+}
+
+.create-list input:focus {outline: none;}
+
+.create-list-inner  {
+  position: absolute;
+  margin-left: 50%;
+  -webkit-transform: translate(-50%);
+     -moz-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.create-list td img:hover, .todo_list td img:hover {
+  cursor: pointer;
+}
+
+#new-item {
+  font-size: 10pt;
+  text-align: center;
+  height: 40px !important;
+}
+
+#new-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.todo_list {
+  vertical-align: top;
+  padding: 10px;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.43);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.43);
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.43);
+  display: inline-block;
+}
+
+.todo_list form {
+  width: 300px;
+  height: 0 auto;
+  max-height: 300px;
+}
+
+.todo_list input[type=text] {
+  margin: 0 0 2px 0px;
+  width: 250px;
+  background: transparent;
+}
+
+.todo_list input[type=submit] {
+  padding: 8px;
+  border-radius: 5px;
+  width: 75px;
+  background-color: #ff5400;
+  color: white;
+  border: none;
+}
+
+#cancel {margin-left: 10px;}
+
+.todo_list tr:last-child td {padding-top: 10px;}
+.todo_list span:first-child {margin-left: 5px;}
+.todo_list span {color: #ff5400;}
+.todo_list span:hover {cursor: pointer; text-decoration: underline;}
+
+#save-section, .todo_list td img {display: none}
+
+.inner-table {
+  height: 230px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.done {text-decoration: line-through;}
+
+
+@media screen and (max-width: 700px) {
+  .todo_list, .inner-table {
+    width: 90%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  .todo_list form, .todo_list table, .inner-table table {width: 100%;}
+  .todo_list input[type=text], .inner-table input[type=text] {width: 80%;}
+}

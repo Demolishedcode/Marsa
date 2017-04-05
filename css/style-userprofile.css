@@ -1,0 +1,325 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: "Lato",sans-serif;
+}
+
+.icon {
+    background-color: rgba(255,87,0,1);
+}
+
+.bg-notification {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 9;
+    display: none;
+}
+
+.user-info, .user-view {
+    display: inline-block;
+    vertical-align: text-top;
+    margin-right:100px;
+    width: 300px;
+}
+
+.user-view {margin-right: 0;}
+
+.profile-title {
+    width: 100%;
+    height: 50px;
+    background-color: #ff5700;
+    color: white;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+.user-content {
+    position: absolute;
+    width: 708px;
+    margin-top: 50px;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+       -moz-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+
+.info-main {
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 250px;
+    height: 200px;
+    background-color: #ff5700;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+       -moz-transform: translate(-50%);
+            transform: translate(-50%);
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+}
+
+.info-main p {
+    word-break: break-all;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.info-main span {
+    font-weight: 500;
+    font-size: 10pt;
+    color: #dfdfdf;
+}
+
+.info-about {
+    width: 300px;
+    margin: 40px 0 30px 50%;
+    -webkit-transform: translate(-50%);
+       -moz-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.info-about p:first-child {word-wrap: break-word;}
+
+.info-about p:last-child {
+    color: #ff5400;
+    padding-top: 10px;
+    border-top: 1px solid #ff5400;
+}
+
+.info-about p:last-child:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.title {
+    color: #ff5400;
+}
+
+.view-groups {
+    margin-bottom: 60px;
+    width: 200px;
+}
+
+.group {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #ff5400;
+    color: white;
+    margin-bottom: -10px;
+}
+
+.group p {
+    line-height: 50px;
+    text-align: center;
+}
+
+.leave {
+  margin-left: 40px;
+}
+
+.leave {
+  cursor: pointer;
+}
+
+.view-reset span {
+    color: #c7c7c7;
+    font-size: 10pt;
+}
+
+.view-reset form {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 1px solid #ff5400;
+}
+
+.view-reset input {
+    border: none;
+    border-radius: 3px;
+    background-color: #ebebeb;
+    color: #9c9c9c;
+    padding: 15px;
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.view-reset input:last-child {
+    background-color: #ff5400;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.view-reset div {
+    margin-bottom: -10px;
+}
+
+@media screen and (max-width: 740px) {
+    .user-view, .user-info {
+        display: block;
+        margin-left: 50%;
+        -webkit-transform: translate(-50%);
+           -moz-transform: translate(-50%);
+                transform: translate(-50%);
+        margin-bottom: 100px;
+    }
+
+    .user-content {
+        width: 100%;
+    }
+}
+
+.error {
+    color: red;
+}
+
+.succes {
+    color: green;
+}
+
+@media screen and (max-width: 350px) {
+    .user-view, .user-info {width: 100%;}
+    .info-about, .info-main {width: 95%;}
+    .view-reset input {width: 80%;}
+
+    .view-groups, .view-reset {
+        width: 200px;
+        margin-left: 50%;
+        -webkit-transform: translate(-50%);
+           -moz-transform: translate(-50%);
+                transform: translate(-50%);
+    }
+
+
+}
+
+/*Style the notification*/
+.change-about {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+       -moz-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    z-index: 10;
+    background-color: white;
+    display: none;
+}
+
+.change-title {
+    width: 100%;
+    height: 50px;
+    background-color: #ff5400;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.change-about textarea[name='user_information'] {
+    border: none;
+    width: 85%;
+    resize: none;
+    margin-left: 50%;
+        -webkit-transform: translate(-50%);
+           -moz-transform: translate(-50%);
+                transform: translate(-50%);
+     background-color: #ebebeb;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+.change-about input {
+    border: none;
+    background-color: #ff5400;
+    color: white;
+    padding: 10px 20px 10px 20px;;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    margin: 15px 0 0 15px;
+}
+
+.count-chars {
+    padding: 20px 0 10px 15px;
+    font-size: 10pt;
+}
+
+.count-chars span {
+    color: #ff5400;
+}
+
+.change-about input:hover {
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    box-shadow: 0px 2px 0px 0px rgba(230,76,35,1);
+    cursor: pointer;
+}
+
+.change-about input, .about-cancel {display: inline-block;}
+.about-cancel {
+    color: #ff5400;
+    margin-left: 10px;
+}
+
+.about-cancel:hover {cursor: pointer}
+
+.change-about input {
+    pointer-events: none;
+}
+
+/*Style Group join requests*/
+.requests-container {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.requests-container table {width: 100%;}
+.requests-container table tr{height: 40px;}
+.requests-container table td:first-child {padding-right: 20px;}
+
+.requests span {display: inline-block;}
+/*.requests span:first-child, .send span:first-child {margin-right: 15px;}*/
+
+.requests span:first-child {
+    padding: 5px;
+    border-radius: 3px;
+    color: #4cd964;
+    border: 1px solid #4cd964;
+    margin-right: 5px;
+}
+
+.requests span:first-child:hover {
+    color: white;
+    background-color: #4cd964;
+    cursor: pointer;
+}
+
+.requests span:last-child, .send span {
+    padding: 5px;
+    border-radius: 3px;
+    color: #ff3b30;
+    border: 1px solid #ff3b30;
+}
+
+.requests span:last-child:hover, .send span:hover {
+    color: white;
+    background-color: #ff3b30;
+    cursor: pointer;
+}
